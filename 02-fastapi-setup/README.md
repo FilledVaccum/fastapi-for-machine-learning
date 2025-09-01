@@ -42,7 +42,7 @@ FastAPI-built APIs are designed to be **very fast, handle concurrent users, and 
 
 *   **API Workflow Overview**: When a client sends an HTTP request to an API (e.g., for an ML prediction endpoint), the request first goes to a **web server**. The web server then passes it to a **Server Gateway Interface (SGI)**, which translates the HTTP request into a Python-understandable format for the API's Python code. After processing, the SGI translates the Python output back into an HTTP response, which the web server sends to the client.
 
-![Flask v/s FastAPI](fastapi-for-machine-learning/02-fastapi-setup/Flask_vs_FastAPI.png "Flask_v/s_FastAPI")
+![Flask v/s FastAPI](fastapi-for-machine-learning/02-fastapi-setup/Flask_vs_FastAPI.png)
 
 *   **Comparison with Flask**:
     *   **Flask (Older Framework)**: Uses **WSGI (Web Server Gateway Interface)**, which is **synchronous** and follows a **blocking architecture**. This means it processes **one request at a time**, making other requests wait, leading to slower processing and scalability challenges. Flask typically uses **Gunicorn** as its web server, which is also synchronous and can face latency issues. The API code written in Flask is generally synchronous, processing one request at a time.
